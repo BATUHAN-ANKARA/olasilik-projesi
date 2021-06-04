@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <title>Olasılık Projesi</title>
+        <title>Olasılık Problemleri İçin Hesaplamal</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,16 +12,80 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"> </script>
 
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+        <script>
+         
+            function sayiUret() {
+              
+               var sayilar =[]
+               for(var i=0;i<10;i++){
+                   sayilar[i]=Math.floor(Math.random() * 100) ;
+           
+               }
+               document.getElementById("data").value = sayilar;
+               
+           }
+   
+   
+           </script>
+
+
+
 
     </head>
     <body>
-        <header><div class="container">
-			<img id="profile-image" class="img-fluid" src="img/profile.png" alt="">
+
+        <nav>
+            <div class="container clearfix">
+                <div id="logo-box">
+                    <a href="/" class="logo text-uppercase">
+                        Olasılık İşlemleri
+                    </a>
+                </div>
+                <div id="nav-links" class="responsive">
+                    <ul>
+    
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-uppercase nav-icon">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link text-uppercase">
+                                Başlayalım
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link text-uppercase">
+                                Kaynak Kodlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav-link text-uppercase">
+                                İletişim
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <header>
+            <div class="container">
 			<h1 class="text-uppercase">Tüm İşlemler Tek Adreste</h1>
 			<hr class="star-light">
 			<h2>
-				Olasılık İşlemleri İçin Hesaplamalar
+				Olasılık İşlemleri İçin Hesaplamalar 
+            </h2>
 				<div id="slider-wrapper">
 					<div class="slider">
 						<a href="" class="img-bir">
@@ -38,72 +102,207 @@
 						</a>
 					</div>
 				</div>
-			</h2>
-		</div></header>
-        
-        <header>
-            <h1>SONUCLAR</h1>
-        </header>
-        
-        <ul>
-            <li>
-                <!--
-                <h2 class="data-heading">Veri setiniz: </h2>
-                <p id="dataSet" style="word-break: break-all;font-family:Courier!important"></p>
-            -->
-                
-                <textarea id="data" class ="form-group" rows="9" placeholder="Veri setini girin"></textarea>
-                <button class="btn-coloreffect" id="numberData" onclick="sayfa()">HESAPLA
-            </button>
+		</div>
+    </header>
+
+    
+    <section id="contact">
+
+        <div class="container">
+    
+            <h2 class="text-uppercase">
+                Başlayalım
+            </h2>
+            <hr class="star-dark">
+    
+    
+           
+    
+                <div class="form-group">
+                    <textarea id="data" rows="5" placeholder="Veri setini giriniz."></textarea>
+                </div>
+    
+                <div>
+                    <button class="btn btn-primary" id="numberData" onclick="sayfa()">
+                        HESAPLA
+                    </button>
+
+                    <button class="btn btn-primary" id="numberData" onclick="sayiUret()">
+                        RANDOM
+                    </button>
+
+
+                </div>
+    
             
-                <p style="text-align: center; font-size: 18px;">Yeni veri seti girmek için <a href= "olasılık_sonuc.html">tıklayınız.</a></p>
-            </li>
-        </ul>
+        </div>
+
+        <section id="table">
+
+
+        <div class="price_table">
+            <div class="package package_free">
+              <h4><u>MOD</u></h4>
+              <p id="modsonuc"></p>
+            </div>
+            
+            <div class="package package_free">
+                <h4><u>MEDYAN</u></h4>
+                <p id="medyansonuc"></p>
+              </div>
+
+              <div class="package package_free">
+                <h4><u>S.SAPMA</u></h4>
+                <p id="sapmasonuc"></p>
+              </div>
+
+              <div class="package package_free">
+                <h4><u>VARYANS</u></h4>
+                <p id="varyanssonuc"></p>
+              </div>
+
+              <div class="package package_free">
+                <h4></h4><u>A.ORT</u></h4>
+                <p id="aortsonuc"></p>
+              </div>
+
+          </div>
+
+          
+
+
+        </section>
+
+        <section id="table2">
+
+
+            <div class="price_table">
+                
+
+
+                <div class="package package_free">
+                    <h4><u>H.ORT</u></h4>
+                    <p id="hortsonuc"></p>
+                  </div>
+    
+                  <div class="package package_free">
+                    <h4><u>D.KATSAYISI</u></h4>
+                    <p id="dkatsayısısonuc"></p>
+                  </div>
+    
+                  <div class="package package_free">
+                    <h4><u>O.SAPMA</u></h4>
+                    <p id="osapmasonuc"></p>
+                  </div>
+    
+                  <div class="package package_free">
+                    <h4><u>G.ORT</u></h4>
+                    <p id="gortsonuc"></p>
+                  </div>
+    
+                </div>
+                <br><br>
+                <div class="histogram" id="histogram">
+                    <canvas id="chart" style ="width:100%;max-width:600px;max-height:600px"></canvas>
+                </div>
+            </section>
+           
+    
+        
+
+    </section>
+
+<section id="about">
+    <h2 class="text-uppercase">KAYNAK KODLAR</h2>
+
+    <hr class="star-light">
+
+    <div id="about-text" class="clearfix">
+
+        <div class="left">
+            <p class="text">
+                Bunun gibi daha fazla proje için bizleri sosyal medyada takip edip destek olmayı unutmayın. En yeni projelerden haberdar
+                olmak için iletişim kısmına mail adresini yazmayı unutma.
+            </p>
+        </div>
+        <div class="right">
+            <p class="text">
+                Bu projede kullanılan kodlar ve projenin yapım aşamaları için 'LEARN' butonuna tıklayınız.
+            </p>
+        </div>
+
+    </div>
+
+    <button class="btn btn-outline btn-large">
+        <i class="fas fa-play"></i>
+        LEARN
+    </button>
+</section>
+
+
+
+
+
+
+<footer>
+    <div class="container clearfix" id="footer">
 
         
-        <br><br>
-        <div class="container" id="mod" >
-            <u><h3>Mod</h3></u>
-            <p id="modsonuc"></p>
+        <div class="col">
+            <h4 class="text-uppercase">Sosyal Medya</h4>
+            <ul>
+
+                <li>
+                    <button class="btn btn-outline btn-social">
+                        <i class="fab fa-fw fa-facebook-f"></i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn btn-outline btn-social">
+                        <i class="fab fa-fw fa-google-plus-g"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn btn-outline btn-social">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn btn-outline btn-social">
+                        <i class="fab fa-fw fa-linkedin-in"></i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn btn-outline btn-social">
+                        <i class="fab fa-fw fa-dribbble"></i>
+                    </button>
+                </li>
+
+
+
+            </ul>
         </div>
-        <div class="container" id="medyan" >
-            <u><h3>Medyan</h3></u>
-            <p id="medyansonuc"></p>
-        </div>
-        <div class="container" id="sapma" >
-            <u><h3>Standart Sapma</h3></u>
-            <p id="sapmasonuc"></p>
-        </div>
-        <div class="container" id="varyans">
-            <u><h3>Varyans</h3></u>
-            <p id="varyanssonuc"></p>
-        </div>
-        <div class="container" id="aort" >
-            <u><h3>Aritmetik Ortalama</h3></u>
-            <p id="aortsonuc"></p>
-        </div>
-        <div class="container" id="hort" >
-            <u><h3>Harmonik Ortalama</h3></u>
-            <p id="hortsonuc"></p>
-        </div>
-        <div class="container" id="gort" >
-            <u><h3>Geometrik Ortalama</h3></u>
-            <p id="gortsonuc"></p>
-        </div>
-        <div class="container" id="osapma">
-            <u><h3>Ortalama Sapma</h3></u>
-            <p id="osapmasonuc"></p>
-        </div>
-        <div class="container" id="dkatsayısı" >
-            <u><h3>Değişim Katsayısı</h3></u>
-            <p id="dkatsayısısonuc"></p>
+        <div class="col">
+            <h4 class="text-uppercase">Ekibimize Katılmak İster Misin?</h4>
+            <p>
+                Sen de öğrenmeye ve keşfetmeye açsan ve eğer ben yorulmam diyorsan, Linkedin üzerinden bizimle iletişime geçebilirsin.
+            </p>
         </div>
 
-        <div class="histogram" id="histogram">
-            <canvas id="chart" style ="width:100%;max-width:600px;max-height:600px"></canvas>
-        </div>
-
+    </div>
+</footer>
         
+
+<div class="copyright">
+    <div class="container">
+        <small>
+            Copyright © Your Website 2021 Olasılık ve İstatistik 14. Grup
+        </small>
+    </div>
+</div>
+
         <script src="kodlar.js"></script>
         <script src="app.js"></script>
         
