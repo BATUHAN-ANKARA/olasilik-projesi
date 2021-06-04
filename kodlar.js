@@ -151,7 +151,6 @@ var harmonikOrtHesapla = function(params){
 }
 
 // GEOMETRİK ORTALAMA
-
 var geometrikOrtHesapla = function(params){
 
   var carpim = 1.0;
