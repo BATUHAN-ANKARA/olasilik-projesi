@@ -1,6 +1,6 @@
 # olasilik projesi
 
-Projemizin Site Sayfası -> http://olasilikislem.coolpage.biz
+Projemizin Site Sayfası -> http://olasiliktekadreste.coolpage.biz
 
 Hazırlayanlar :
 
